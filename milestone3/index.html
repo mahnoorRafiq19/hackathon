@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dynamic Resume Builder</h1>
+
+        <!-- Form to collect user input -->
+        <div class="form-container">
+            <form id="resume-form">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" placeholder="Enter your name!" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Enter your email!" required>
+                </div>
+                <div>
+                    <label for="profile-pic">Profile Picture:</label>
+                    <input type="file" id="profile-pic" accept="image/*">
+                </div>
+                <div>
+                    <label for="education">Education:</label>
+                    <input type="text" id="education-input" placeholder="E.g., High School, College" required>
+                </div>
+                <div>
+                    <label for="skills">Skills:</label>
+                    <input type="text" id="skills-input" placeholder="E.g., JavaScript, HTML, CSS" required>
+                </div>
+                <div>
+                    <label for="work-experience">Work Experience:</label>
+                    <input type="text" id="work-exp-input" placeholder="E.g., Intern,full-timer" required>
+                </div>
+                <button type="submit">Generate Resume</button>
+            </form>
+        </div>
+
+        <!-- Dynamic resume display (initially hidden) -->
+        <div id="resume" class="resume-container" style="display:none;">
+            <h2>Generated Resume</h2>
+            <div id="personal-info">
+                <div id="profile-picture-container">
+                    <img id="profile-picture" alt="Profile Picture">
+                </div>
+                <p id="display-name"></p>
+                <p id="display-email"></p>
+            </div>
+            <div id="dynamic-education">
+                <h3>Education</h3>
+                <ul></ul>
+            </div>
+            <div id="dynamic-skills">
+                <h3>Skills</h3>
+                <ul></ul>
+            </div>
+            <div id="dynamic-work-exp">
+                <h3>Work Experience</h3>
+                <ul></ul>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
+
